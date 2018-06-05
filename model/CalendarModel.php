@@ -30,7 +30,9 @@ function deleteBirthday($id)
 {
 	$db = openDatabaseConnection();
 	$sql = "DELETE FROM birthdays WHERE `birthdays`.`id` = $id";
-	$query = $db->prepare($sql); $query->execute(); $db = null;
+	$query = $db->prepare($sql);
+	$query->execute(); 
+	$db = null;
 }
 function getBirthday($id)
 {
